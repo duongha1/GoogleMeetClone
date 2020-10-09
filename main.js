@@ -34,7 +34,7 @@ function playStream(idVideoEl, stream) {
 }
 
 //Element
-const peer = new Peer();
+const peer = new Peer({key: 'peerjs', host:'streamdh.herokuapp.com', secure: true, port: 443});//https -> 443
 
 //Create an ID of a call
 const peerIdCall = peer.on("open", (id) => {
